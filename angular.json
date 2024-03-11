@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "authLogin": {
+    "authlogin": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "authLogin:build:production"
+              "buildTarget": "authlogin:build:production"
             },
             "development": {
-              "buildTarget": "authLogin:build:development"
+              "buildTarget": "authlogin:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "authLogin:build"
+            "buildTarget": "authlogin:build"
           }
         },
         "test": {

@@ -1,0 +1,16 @@
+<h1>Login de Usuario</h1>
+<form [formGroup]="formLogin">
+    <div class="register">
+        <label>
+            Email:
+            <input type="text" formControlName="email" class="form-control">
+        </label>
+        
+        <label>
+            Password:
+            <input type="password" formControlName="password" placeholder="abc123" class="form-control" >
+        </label>
+        <button (click)="onSubmit()" class="btn btn-primary">Enviar</button>
+    </div>
+
+</form>
