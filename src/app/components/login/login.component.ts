@@ -17,24 +17,33 @@ export class LoginComponent implements OnInit {
     private userServices: UserService,
     private router: Router
 
-  ){
+  ) {
     this.formLogin = new FormGroup({
       email: new FormControl(),
       password: new FormControl(),
     })
   }
   ngOnInit(): void {
-    
+
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.formLogin.value);
     this.userServices.login(this.formLogin.value)
-    .then(result => {
-      console.log("result", result);
-      this.router.navigate([''])
-    })
-    .catch(error => console.log(error))
+      .then(result => {
+        console.log("result", result);
+        this.router.navigate([''])
+      })
+      .catch(error => console.log(error))
+  }
+
+  onClick() {
+    this.userServices.loginWithGoogle()
+      .then((response) => {
+        console.log("Respuesta de Google", response);
+        this.router.navigate(['/main'])
+      })
+      .catch((error) => console.log("Google", error))
   }
 
 

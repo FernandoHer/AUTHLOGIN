@@ -1,0 +1,11 @@
+.card{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
