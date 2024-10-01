@@ -10,7 +10,7 @@ export const routes: Routes = [
     {
         path: 'main',
         component: MainComponent,
-        ...canActivate(()=> redirectUnauthorizedTo(['/register']))
+        ...canActivate(()=> redirectUnauthorizedTo(['/login']))
     },
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent }

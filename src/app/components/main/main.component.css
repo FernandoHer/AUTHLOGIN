@@ -1,4 +1,96 @@
 .card{
+    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
+    width: 1150px;
+    height: auto;
+    background-color: rgb(232, 229, 229);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 95px;
+    height: auto;
+}
+
+.input-form{
+    width: 435px;
+    border-radius: 11px;
+}
+
+.name-router{
+    color: rgb(174, 172, 172);
+    font-size: 18px;
+}
+
+.container-input{
+    width: 600px;
+    margin-left: 200px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.container-input1{
+    width: 675px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    position: relative;
+    margin-bottom: 0;
+}
+
+input::placeholder{
+    color: rgb(232, 229, 229);
+}
+
+label {
+    width: 100px;
+    text-align: end;
+}
+
+.label-client{
+    width: 400px;
+}
+
+.message{
+    display: flex;
+    margin-top: -27px;
+    justify-content: flex-start;
+    align-items: start;
+    width: 149px;
+  }
+
+  .btn-side{
+    width: 140px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  .btn-side1{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    margin-top: 30px;
+  }
+
+
+.span-footer{
+    color: rgb(174, 172, 172);
+    text-align: center;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 20px;
+    right: 124px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
 }

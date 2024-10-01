@@ -1,4 +1,67 @@
-<div class="card w-50 mt-5">
-    <button (click)="onClick()" class="btn btn-primary">Salir del sistema</button>
-
+<div class="container">
+    <div class="card col">
+        <div class="row">
+            <div class="col-8">
+                <div class="d-flex flex-row justify-content-around">
+                    <p class="text-center mt-5 name-router">{{nameRouter}}</p>
+                    <h3 class="text-center mt-5">Greet Router Configuration</h3>
+                </div>
+                <form [formGroup]="routerForm" class="">
+                    <div class="main">
+                        <div class="d-flex flex-row container-input1">
+                            <p for="clientId" class="label-client">Client Configuration</p>
+                        </div>
+                        <div class="d-flex flex-row container-input">
+                            <label for="clientId" class="mt-2 me-4">Client ID:</label>
+                            <input type="clientId" id="clientId" formControlName="clientId"
+                                class="form-control  input-form" placeholder="example@greetsolutions.com">
+                        </div>
+                        <div *ngIf="isValidField('clientId')">
+                            <span class="form-text text-danger message">
+                                {{ getFieldError('clientId')}}
+                            </span>
+                        </div>
+                        <div class="d-flex flex-row container-input">
+                            <label for="branchId" class="mt-2 me-4">Branch ID:</label>
+                            <input type="branchId" id="branchId" formControlName="branchId"
+                                class="form-control  input-form" placeholder="example@greetsolutions.com">
+                        </div>
+                        <div *ngIf="isValidField('branchId')">
+                            <span class="form-text text-danger message">
+                                {{ getFieldError('branchId')}}
+                            </span>
+                        </div>
+                        <div class="d-flex flex-row container-input">
+                            <label for="apiKey" class="mt-2 me-4">Api Key:</label>
+                            <input type="apiKey" id="apiKey" formControlName="apiKey" class="form-control  input-form"
+                                placeholder="example@greetsolutions.com">
+                        </div>
+                        <div *ngIf="isValidField('apiKey')">
+                            <span class="form-text text-danger message">
+                                {{ getFieldError('apiKey')}}
+                            </span>
+                        </div>
+                        <div class="d-flex flex-row container-input">
+                            <label for="routerName" class="mt-2 me-4">Router Name:</label>
+                            <input type="routerName" id="routerName" formControlName="routerName"
+                                class="form-control  input-form" placeholder="example@greetsolutions.com">
+                        </div>
+                        <div *ngIf="isValidField('routerName')">
+                            <span class="form-text text-danger message">
+                                {{ getFieldError('routerName')}}
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3 d-flex flex-column align-items-end mx-4">
+                <button class="btn btn-primary btn-side">Shut Down</button>
+                <button class="btn btn-primary btn-side">Reload</button>
+                <button class="btn btn-primary btn-side" (click)="logout()">Log Out</button>
+            </div>
+            <div class="row">
+                <button [disabled]="!routerForm.valid" class="btn btn-primary btn-side1">Set and Reboot</button>
+            </div>
+        </div>
+    </div>
 </div>

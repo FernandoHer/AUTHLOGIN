@@ -11,14 +11,17 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit {
-  formLogin: FormGroup;
+  loginForm: FormGroup;
+  isBtnDisabled: boolean = false;
+  error: any;
+  logo: string = "./../assets/logoGreet.png";
 
   constructor(
     private userServices: UserService,
     private router: Router
 
   ) {
-    this.formLogin = new FormGroup({
+    this.loginForm = new FormGroup({
       email: new FormControl(),
       password: new FormControl(),
     })
@@ -28,8 +31,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formLogin.value);
-    this.userServices.login(this.formLogin.value)
+    console.log(this.loginForm.value);
+    this.userServices.login(this.loginForm.value)
       .then(result => {
         console.log("result", result);
         this.router.navigate([''])
